@@ -944,15 +944,15 @@ main {
   right: 0;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 991px) {
   .info {
-    font-size: 12px;
-    padding-left: 18px;
+    font-size: 14px;
+    border: 0;
+    letter-spacing: 0.2em;
   }
   .info::before {
-    width: 5px;
-    height: 9px;
-    top: 4px;
+    width: 6px;
+    height: 6px;
   }
 }
 
@@ -1318,10 +1318,8 @@ main {
     margin: 0 auto;
   }
   .swiper-tab_btns {
-    padding-bottom: 40px;
-    -webkit-transform: none !important;
-            transform: none !important;
-    width: 100%;
+    padding: 0 0 40px;
+    gap: 10px;
   }
   .swiper-tab_btns_item {
     width: 100%;
@@ -1334,6 +1332,10 @@ main {
   }
   .swiper-tab_btns_item span {
     padding: 0 10px !important;
+  }
+  .swiper-tab_btns_item span::before {
+    width: 5px;
+    height: 10px;
   }
   .swiper-tab_btns_ch {
     font-size: 20px;
@@ -1356,6 +1358,12 @@ main {
   }
   .swiper-tab_subtitle li {
     font-size: 18px;
+    padding: 0 12px;
+    letter-spacing: 0.1em;
+  }
+  .swiper-tab_subtitle li::after {
+    width: 2px;
+    height: 20px;
   }
 }
 
@@ -1408,6 +1416,30 @@ main {
     top: 120px;
     right: inherit;
     left: -40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .life .info {
+    padding: 0 !important;
+    margin-bottom: 40px;
+  }
+  .life .info::before {
+    top: 50%;
+    left: calc(100% + 8px) !important;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .life .info::after {
+    position: absolute;
+    content: "";
+    width: calc((100vw - 185px) / 2 - 14px);
+    height: 1px;
+    background-color: #172245;
+    top: 50%;
+    left: calc(100% + 14px) !important;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
