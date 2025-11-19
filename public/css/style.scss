@@ -1169,6 +1169,13 @@ main {
           }
         }
       }
+      &:not(.pic-right) {
+      .swiper-tab_text {
+        .text {
+          padding-left: 0;
+        }
+      }
+    }
     }
   }
 }
@@ -1253,11 +1260,14 @@ main {
   .swiper-tab_text {
     position: relative;
   }
+  .swiper-tab_pic {
+    position: relative;
+  }
   .swiper-tab-3-thumbnail {
     padding-left: 8px;
     position: absolute;
-    width: 100%;
-    right: 0;
+    width: calc(100% / 6 * 4);
+    left: 100%;
     bottom: 0;
     .swiper-tab_pic_item {
       cursor: pointer;
@@ -1268,6 +1278,33 @@ main {
       &-thumb-active {
         opacity: 1;
       }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .info {
+      padding: 0 0 0 20px;
+      margin-bottom: 12px;
+      &::before {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: calc((100vw - 217px) / 2);
+        height: 1px;
+        background-color: $text;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+      }
+    }
+    .swiper-tab-3-thumbnail {
+      position: static;
+      width: 100%;
+      margin-top: 4px;
+      padding: 0;
     }
   }
 }
