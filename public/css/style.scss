@@ -1877,11 +1877,11 @@ main {
     }
   }
   @media screen and (max-width: 991px) {
-    padding-top: 65px;
-    padding-bottom: 90px;
+    padding-top: 60px;
+    padding-bottom: 50px;
     .container {
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 55px;
+      padding-right: 55px;
     }
     .row {
       > div {
@@ -1889,10 +1889,10 @@ main {
       }
     }
     &_title {
-      margin-bottom: 45px;
-      gap: 10px;
+      margin-bottom: 40px;
       h2 {
         font-size: 22px;
+        margin-bottom: 12px;
         span {
           padding: 0 10px;
           &::after {
@@ -1900,6 +1900,9 @@ main {
             height: 12px;
           }
         }
+      }
+      p {
+        font-size: 11px;
       }
     }
     &_input {
@@ -1932,10 +1935,64 @@ main {
         padding-left: 0;
         font-size: 12px;
       }
+    .line {
+      background-color: $primary-500;
+      position: absolute;
+      &-top {
+        width: calc(100% - 20px);
+        height: 1px;
+        left: 10px;
+      }
+      &-top-right {
+        width: 1px;
+        height: calc(10px * sqrt(2));
+        top: 0;
+        right: 0;
+        transform: rotate(-45deg) translate(-2.5px, -5px);
+      }
+      &-right {
+        width: 1px;
+        height: calc(100% - 20px);
+        top: 10px;
+      }
+      &-bottom-right {
+        width: 1px;
+        height: calc(10px * sqrt(2));
+        transform: rotate(45deg) translate(-2.5px, 5px);
+      }
+      &-bottom {
+        width: calc(100% - 20px);
+        height: 1px;
+        left: 10px;
+      }
+      &-left-bottom {
+        width: 1px;
+        height: calc(10px * sqrt(2));
+        transform: rotate(135deg) translate(-2.5px, -5px);
+      }
+      &-left {
+        width: 1px;
+        height: calc(100% - 20px);
+        top: 10px;
+      }
+      &-left-top {
+        width: 1px;
+        height: calc(10px * sqrt(2));
+        transform: rotate(-135deg) translate(-2.5px, 5px);
+      }
+    }
     }
     #submit {
       margin: 45px auto 0;
-      font-size: 20px;
+      font-size: 18px;
+      padding: 0;
+      width: 122px;
+      height: 34px;
+      background-color: transparent;
+      background-image: url(../img/btn.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -2059,17 +2116,17 @@ main {
     }
   }
   @media screen and (max-width: 767px) {
-    background-color: transparent;
+    // background-color: transparent;
     &_top {
-      padding-top: 0;
+      // padding-top: 0;
       padding-bottom: 0;
       width: fit-content;
       margin: 0 auto;
       h2 {
         margin-bottom: 35px;
-        color: $third-500;
+        // color: $third-500;
         font-size: 22px;
-        font-weight: 700;
+        // font-weight: 700;
       }
     }
     &_inform {
@@ -2082,22 +2139,21 @@ main {
         > li {
           align-items: flex-start;
           p {
-            color: $third-500;
+            // color: $third-500;
             &.footer_inform {
               &_title {
                 font-size: 15px;
-                font-weight: 700;
+                // font-weight: 700;
                 letter-spacing: 0.25em;
-                &::before,
                 &::after {
-                  background-color: $third-500;
+                  background-color: #fff;
                   width: 1.4px;
                   height: 7px;
                 }
               }
               &_content {
                 font-size: 12px;
-                font-weight: 700;
+                // font-weight: 700;
                 letter-spacing: 0.1em;
               }
             }
