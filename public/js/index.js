@@ -31,10 +31,15 @@ var swiperBeauty = new Swiper(".beauty_swiper", {
 });
 
 var swiperGallery = new Swiper(".gallery_swiper", {
-  slidesPerView: 3.3,
+  slidesPerView: 1.3,
   speed: 800,
   centeredSlides: true,
   loop: true,
+  breakpoints: {
+    992: {
+      slidesPerView: 3.3,
+    },
+  },
 });
 
 var swiperTab1 = new Swiper(".swiper-tab-1", {

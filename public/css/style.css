@@ -261,6 +261,12 @@ main {
   color: #192022;
 }
 
+@media screen and (max-width: 991px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
 .remark {
   position: absolute;
   font-family: "Noto Sans TC", sans-serif;
@@ -1544,6 +1550,35 @@ main {
   right: 0;
   background: -webkit-gradient(linear, right top, left top, from(#003c7a), color-stop(55%, #003c7a), to(transparent));
   background: linear-gradient(to left, #003c7a 0%, #003c7a 55%, transparent 100%);
+}
+
+@media screen and (max-width: 991px) {
+  .gallery_content {
+    padding-bottom: 18px;
+  }
+  .gallery_swiper::before, .gallery_swiper::after {
+    width: 50px;
+  }
+  .gallery_text {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto 60px;
+  }
+  .gallery_text .title-ch {
+    margin-bottom: 24px;
+  }
+  .gallery_text .title-ch h2 {
+    text-align: center;
+  }
+  .gallery_text .title-en {
+    margin-bottom: 10px;
+    letter-spacing: 0.3em;
+  }
+  .gallery_text .text {
+    text-align: justify;
+    width: 190px;
+  }
 }
 
 .brand {
