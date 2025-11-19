@@ -1286,8 +1286,8 @@ main {
     height: 5px;
   }
   .swiper-tab {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
   .swiper-tab .container {
     -webkit-box-orient: vertical;
@@ -1503,6 +1503,45 @@ main {
     width: 100%;
     margin-top: 4px;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .recreation {
+    position: relative;
+  }
+  .recreation_line {
+    position: absolute;
+    width: 140%;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: inherit;
+  }
+  .recreation .swiper-tab_subtitle {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 12px;
+  }
+  .recreation .info {
+    padding: 12px 0 0 !important;
+  }
+  .recreation .info::before {
+    top: 0;
+    right: 100%;
+    -webkit-transform: translateY(calc(-50% + 0.5px));
+            transform: translateY(calc(-50% + 0.5px));
+  }
+  .recreation .info::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #172245;
+    top: 0;
+    left: 0;
   }
 }
 
