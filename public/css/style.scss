@@ -20,10 +20,10 @@ $shadow: 0 0 5px rgba(32, 56, 105, 0.75);
 
 $kv-padding-top: 8.16vw;
 $kv-padding-bottom: 8.04vw;
-$kv-padding-top-mobile: 31.11vw;
-$kv-padding-bottom-mobile: 63.06vw;
+$kv-padding-top-mobile: 24.17vw;
+$kv-padding-bottom-mobile: 34.72vw;
 $kv-logo-width: 855px;
-$kv-logo-width-mobile: 57vw;
+$kv-logo-width-mobile: 70vw;
 
 @mixin gradientText {
   background: $gradient;
@@ -172,7 +172,7 @@ main {
       li {
         padding: 0 12px;
         h2 {
-          font-size: 22px;
+          font-size: 21px;
         }
         &::after {
           width: 5px;
@@ -181,7 +181,7 @@ main {
       }
     }
     &-en {
-      font-size: 16px;
+      font-size: 10px;
     }
   }
 }
@@ -223,26 +223,10 @@ main {
       }
     }
   }
-  &.color-white {
-    li {
-      color: #fff;
-      &::after {
-        background-color: $secondary-500;
-      }
-      > span {
-        &::after {
-          background-color: $secondary-500;
-        }
-      }
-      .highlight {
-        color: $secondary-500;
-      }
-    }
-  }
   @media screen and (max-width: 1100px) {
     li {
-      font-size: 12px;
-      padding: 0 7px;
+      font-size: 13px;
+      padding: 0 8px;
       &::after {
         height: 8px;
         right: 0;
@@ -536,63 +520,64 @@ main {
     }
     &_h2 {
       display: block;
-      padding-bottom: 12px;
+      padding-bottom: 0;
       border-bottom: 0;
-      li {
-        padding: 0;
-        position: relative;
-        h2 {
-          font-size: 27px;
+      &_special {
+        width: 190px;
+        margin: 0 auto 15px;
+        >h2 {
+          font-size: 21px;
         }
-        &::after {
-          position: absolute;
-          content: "";
-          width: 29px;
-          height: 1px;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-        }
-        &:last-child {
+      }
+      &_place {
+        justify-content: center;
+        li {
+          padding: 0 8px;
+          font-size: 22px;
           &::after {
-            display: none;
+            width: 8px;
+            height: 8px;
           }
         }
       }
     }
     &_h3 {
-      padding-top: 7px;
-      padding-bottom: 7px;
-      border-top: 1px solid #fff;
-      border-bottom: 1px solid #fff;
-      li {
-        padding: 0 8px;
-        h3 {
-          font-size: 21px;
+      padding-bottom: 16px;
+      &_title {
+        font-size: 37px;
+        letter-spacing: 0;
+        margin-bottom: 12px;
+        .highlight {
+          font-size: 59px;
+          margin: 0 5px;
+        }
+      }
+      &_feat {
+        padding: 2px 0 4px;
+        li {
+          padding: 0 6px;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
           .highlight {
-            width: 24px;
-            height: 24px;
-            font-size: 23px;
-            line-height: 24px;
-            span {
-              transform: translate(1px, -1px);
-            }
+            font-size: 29px;
           }
-        }
-        &::after {
-          height: 13px;
-        }
-        &:nth-child(2) {
-          padding-right: 0;
           &::after {
-            display: none;
+            width: 2px;
+            height: 15px;
+            transform: translate(100%, -50%);
           }
         }
       }
     }
-    &_text {
-      position: relative;
-      z-index: 1;
+    &_phone {
+      gap: 6px;
+      p {
+        font-size: 12px;
+      }
+      h3 {
+        font-size: 30px;
+      }
     }
   }
 }
@@ -614,6 +599,56 @@ main {
   }
   .subtitle {
     margin-bottom: 14px;
+  }
+  &_text {
+    .title-ch {
+      br {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    top: 181.39vw;
+    padding-top: 50px;
+    &_text {
+      .title-ch {
+        margin-bottom: 30px;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 82px;
+          height: 71px;
+          background-image: url(../img/title-border.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          padding: 0;
+          &::after {
+            display: none;
+          }
+        &:first-child {
+          transform: translateX(14px);
+        }
+        &:last-child {
+          transform: translateX(-14px);
+        }
+        }
+        h2 {
+          text-align: center;
+          letter-spacing: 0;
+        }
+        br {
+          display: block;
+        }
+      }
+    }
+  .subtitle {
+    margin-bottom: 5px;
+  }
+  .title-en {
+    letter-spacing: 0.6em;
+  }
   }
 }
 

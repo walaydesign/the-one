@@ -156,32 +156,6 @@ $("#swiper-tab-4 .swiper-tab_btns_item").click(function () {
 });
 
 
-
-
-
-
-
-
-
-
-var swiperArrange = new Swiper(".arrange_swiper", {
-  slidesPerView: 1,
-  navigation: {
-    nextEl: "#arrange-next",
-    prevEl: "#arrange-prev",
-  },
-  speed: 800,
-  pagination: {
-    el: "#arrange-pagination",
-    clickable: true,
-  },
-  effect: "fade",
-  allowTouchMove: false,
-  fadeEffect: {
-    crossFade: true,
-  },
-});
-
 function sendEmail() {
   Email.send({
     SecureToken: "8207c7d7-4a6c-4797-870d-d16ee71023ce",
@@ -200,15 +174,3 @@ function sendEmail() {
   }).then((message) => alert("感謝您的來信！我們很快就會和您聯繫！"));
 }
 
-$(window).on("resize", function () {
-  mapResize();
-});
-mapResize();
-function mapResize() {
-  if ($(window).width() <= 991) {
-    let mapWidth = $(".map_pic_inner").height() * 1.28;
-    let windowWidth = $(window).width();
-    let mapX = (mapWidth - windowWidth) / 2;
-    $(".map_pic").animate({ scrollLeft: mapX });
-  }
-}
