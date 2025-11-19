@@ -175,8 +175,8 @@ main {
           font-size: 21px;
         }
         &::after {
-          width: 5px;
-          height: 5px;
+          width: 1px;
+          height: 12px;
         }
       }
     }
@@ -714,33 +714,71 @@ main {
       letter-spacing: 0.1em;
     }
   }
+  .remark {
+    z-index: 1;
+  }
   @media screen and (max-width: 991px) {
+    &_bg {
+      &_item {
+        padding-bottom: 169.44%;
+      }
+    .swiper {
+      &-arrow {
+        right: 13px;
+      }
+      &-pagination {
+        display: none;
+      }
+    }
+    }
+    &_title {
+      font-size: 19px;
+      width: 190px;
+      margin: 0 auto 25px;
+      span {
+        display: block;
+        letter-spacing: 0;
+        position: relative;
+        @include gradientText();
+        &:first-child {
+          text-align: left;
+          &::after {
+            width: calc(100% - 110px);
+            right: 0;
+          }
+        }
+        &:last-child {
+          text-align: right;
+          &::after {
+            width: calc(100% - 150px);
+            left: 0;
+          }
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          height: 1px;
+          background: $gradient;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
     &_text {
-      top: 32vw;
+      top: 19.72vw;
       .title {
         &-ch {
-          margin-bottom: 20px;
-          flex-direction: column;
+          margin-bottom: 5px;
           li {
-            padding: 5px 0;
-            &::after {
-              display: none;
+            padding: 0 5px;
+            h2 {
+              letter-spacing: 0.05em;
             }
           }
         }
         &-en {
-          margin-bottom: 25px;
-        }
-      }
-      .subtitle {
-        li {
-          flex-direction: column;
-          span {
-            padding: 0 4px;
-            &::after {
-              display: none;
-            }
-          }
+          margin-bottom: 0;
+          letter-spacing: 0.3em;
         }
       }
     }
@@ -1102,12 +1140,12 @@ main {
       }
     }
     &-arrow {
-      width: 18px;
-      height: 18px;
+      width: 10px;
+      height: 20px;
       padding: 0;
       svg {
-        width: 9px;
-        height: 9px;
+        width: 10px;
+        height: 19px;
       }
     }
   }
