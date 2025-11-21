@@ -57,14 +57,14 @@ var swiperTab1 = new Swiper(".swiper-tab-1", {
   on: {
     slideChangeTransitionEnd: function () {
       let index = $(".swiper-tab-1 .swiper-slide-active").index();
-      $("#swiper-tab-1 .swiper-tab_btns_item").removeClass("active");
-      $("#swiper-tab-1 .swiper-tab_btns_item").eq(index).addClass("active");
+      $("#essence .swiper-tab_btns_item").removeClass("active");
+      $("#essence .swiper-tab_btns_item").eq(index).addClass("active");
     },
   },
 });
 
-$("#swiper-tab-1 .swiper-tab_btns_item").click(function () {
-  $("#swiper-tab-1 .swiper-tab_btns_item").removeClass("active");
+$("#essence .swiper-tab_btns_item").click(function () {
+  $("#essence .swiper-tab_btns_item").removeClass("active");
   $(this).addClass("active");
   let li_index = $(this).parents(".row-item").index();
   swiperTab1.slideTo(li_index, 1000, true);
