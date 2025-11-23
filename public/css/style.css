@@ -2218,6 +2218,7 @@ main {
   font-family: "Noto Sans TC", sans-serif;
   color: #002942;
   font-weight: 300;
+  white-space: nowrap;
 }
 
 .contact_input input, .contact_textarea input {
