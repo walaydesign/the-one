@@ -547,6 +547,9 @@ main {
     }
     &_h3 {
       padding-bottom: 16px;
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
       &_title {
         font-size: 37px;
         letter-spacing: 0;
