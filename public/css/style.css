@@ -1902,6 +1902,12 @@ main {
 .brand_main .row img {
   -webkit-filter: drop-shadow(0 0 10px #1d154f);
           filter: drop-shadow(0 0 10px #1d154f);
+  overflow: visible;
+}
+
+.brand_main .row img.guard {
+  -webkit-filter: drop-shadow(0 0 10px rgba(29, 21, 79, 0.6));
+          filter: drop-shadow(0 0 10px rgba(29, 21, 79, 0.6));
 }
 
 @media screen and (max-width: 991px) {
