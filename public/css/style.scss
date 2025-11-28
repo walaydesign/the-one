@@ -167,6 +167,15 @@ main {
     height: 1px;
     background-color: $third-500;
   }
+  @media screen and (max-width: 1450px) {
+    &-ch {
+      li {
+        h2 {
+          font-size: 44px;
+        }
+      }
+    }
+  }
   @media screen and (max-width: 1100px) {
     &-ch {
       li {
@@ -221,6 +230,11 @@ main {
       &::after {
         display: none;
       }
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    li {
+      font-size: 32px;
     }
   }
   @media screen and (max-width: 1100px) {
@@ -1656,6 +1670,13 @@ main {
         &.guard {
           filter: drop-shadow(0 0 10px rgba(29, 21, 79, 0.6));
         }
+      }
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    &_title {
+      &_en {
+        font-size: 64px;
       }
     }
   }
