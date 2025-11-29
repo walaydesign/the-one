@@ -872,14 +872,13 @@
             </p>
           </div>
           <form
-            class="contact_form"
-            onsubmit="sendEmail(); reset(); return false"
+            class="contact_form" id="contact-form"
           >
             <div class="row">
               <div class="col-md-6">
                 <div class="contact_input">
                   <label for=""><span>姓</span><span>名:</span></label>
-                  <input type="text" id="name" required />
+                  <input type="text" id="name" name="name" required />
                   <div class="line line-top"></div>
                   <div class="line line-top-right"></div>
                   <div class="line line-right"></div>
@@ -894,7 +893,7 @@
                     ><span>聯</span><span>絡</span><span>電</span
                     ><span>話:</span></label
                   >
-                  <input type="phone" id="phone" required />
+                  <input type="phone" id="phone" name="phone" required />
                   <div class="line line-top"></div>
                   <div class="line line-top-right"></div>
                   <div class="line line-right"></div>
@@ -906,7 +905,7 @@
                 </div>
                 <div class="contact_input">
                   <label for=""><span>LINE ID:</span></label>
-                  <input type="text" id="line" placeholder="(選填)" />
+                  <input type="text" id="line" name="line" placeholder="(選填)" />
                   <div class="line line-top"></div>
                   <div class="line line-top-right"></div>
                   <div class="line line-right"></div>
@@ -921,7 +920,7 @@
                     ><span>居</span><span>住</span><span>地</span
                     ><span>區:</span></label
                   >
-                  <input type="text" id="area" placeholder="縣市／區鎮鄉 (選填)" />
+                  <input type="text" id="area" name="area" placeholder="縣市／區鎮鄉 (選填)" />
                   <div class="line line-top"></div>
                   <div class="line line-top-right"></div>
                   <div class="line line-right"></div>
@@ -936,7 +935,7 @@
                 <div class="contact_textarea">
                 <textarea
                   placeholder="請輸入您的留言(選填)"
-                  name=""
+                  name="message"
                   id="message"
                   cols="30"
                 ></textarea>
@@ -1066,7 +1065,8 @@
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./public/js/swiper/swiper-bundle.min.js"></script>
     <script src="./public/js/aos/aos.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js?v=20240527"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js?v=20240527"></script> -->
     <script src="./public/js/index.js"></script>
   </body>
 </html>
